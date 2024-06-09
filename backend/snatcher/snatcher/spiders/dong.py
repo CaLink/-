@@ -70,7 +70,9 @@ class DongSpider(scrapy.Spider):
         tag_list = car.fields.keys()
         for tag in tag_list:
             car[tag] = response.xpath(xpath_preset.format(tag=tag)).get()
+        car['auction'] = 'dongchedi'
         car['car_id'] = id
+        print(car)
 
         save_car(car)
 

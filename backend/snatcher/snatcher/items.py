@@ -20,6 +20,7 @@ class CarCategoryItem(scrapy.Item):
 
 
 class CarItem(scrapy.Item):
+    auction = scrapy.Field()
     car_id = scrapy.Field()
     sub_brand_name = scrapy.Field()
     official_price = scrapy.Field()
